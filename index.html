@@ -5,28 +5,244 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PSYHOTRUMP</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
     <!-- HEADER -->
+    <header class="header">
+        <div class="header__container">
+
+            <nav class="header__navigation navigation">
+                <ol class="navigation__list">
+                    <li><a href="#about" class="navigation__link">about</a></li>
+                    <li><a href="javascript:void(0)" class="navigation__link socials-link">twitter</a></li>
+                    <li><a href="javascript:void(0)" class="navigation__link socials-link">telegram</a></li>
+                    <li><a href="#roadmap" class="navigation__link">road map</a></li>
+                    <li><a href="#buy" class="navigation__link"><span>How to</span> buy</a></li>
+                    <li><a href="javascript:void(0)" class="navigation__link socials-link">dextools</a></li>
+                </ol>
+            </nav>
+
+            <a href="javascript:void(0)" class="header__btn">Buy token</a>
+
+        </div>
+    </header>
 
 
     <!-- HOME -->
+    <section class="home">
+
+        <div class="home__token">
+            <span class="token__code">Contract Address</span>
+            <button type="button" class="token__copy">
+                <svg width="36" height="30" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect width="36" height="36" fill="url(#pattern0_2_100)" />
+                    <defs>
+                        <pattern id="pattern0_2_100" patternContentUnits="objectBoundingBox" width="1" height="1">
+                            <use xlink:href="#image0_2_100" transform="scale(0.0078125)" />
+                        </pattern>
+                        <image id="image0_2_100" width="128" height="128"
+                            xlink:href="data:image/png;base64,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" />
+                    </defs>
+                </svg>
+            </button>
+        </div>
+
+        <div class="home__links">
+            <a href="javascript:void(0)">Buy token</a>
+            <a href="javascript:void(0)">Join telegram</a>
+            <a href="javascript:void(0)">Dexttols</a>
+        </div>
+
+
+    </section>
 
 
     <!-- ABOUT -->
+    <section class="about">
+
+        <div class="about__site-map">
+            <span>About</span>
+            <div></div>
+            <span>$PSYHOTRUMP</span>
+        </div>
+
+        <div class="about__container">
+            <div>
+
+                <h2 class="about__title">About</h2>
+
+                <p class="about__description">
+                    PSYHOTRUMP is a unique and entertaining meme token launched on the Solana
+                    blockchain. Inspired by the eccentric and larger-than-life persona of a well-known political figure.
+                </p>
+
+                <a href="javascript:void(0)" class="about__btn">
+                    <span>Read more</span>
+                    <div>
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M22 2C22 0.89543 21.1046 -7.48422e-07 20 9.4515e-08L2 -3.26954e-07C0.895431 -3.26954e-07 5.74219e-07 0.89543 5.74219e-07 2C5.74219e-07 3.10457 0.895431 4 2 4L18 4L18 20C18 21.1046 18.8954 22 20 22C21.1046 22 22 21.1046 22 20L22 2ZM3.41421 21.4142L21.4142 3.41421L18.5858 0.585786L0.585786 18.5858L3.41421 21.4142Z"
+                                fill="black" />
+                        </svg>
+                    </div>
+                </a>
+
+            </div>
+
+            <div class="about__img">
+                <img src="public/img/about/about_img.png" alt="" width="674" height="467" loading="lazy">
+            </div>
+        </div>
+
+    </section>
 
 
     <!-- ROADMAP -->
+    <section class="roadmap">
+
+        <div class="roadmap__site-map">
+            <span>$PSYHOTRUMP</span>
+            <div></div>
+            <span>Road map</span>
+        </div>
+
+        <div class="roadmap__container">
+
+            <h2 class="roadmap__title">Road map</h2>
+
+            <ul class="roadmap__phases">
+
+                <li>
+                    <b>Phase 1: </b>
+                    <span>deploy the $PSYHOTRUMP, airdrop campaign</span>
+                </li>
+
+                <li>
+                    <b>Phase 2: </b>
+                    <span>listing on DEX, meme contests, airdrop</span>
+                </li>
+
+                <li>
+                    <b>Phase 3: </b>
+                    <span>NFT launch, staking and rewards, charity initiatives</span>
+                </li>
+
+                <li>
+                    <b>Phase 4: </b>
+                    <span>governance model, global outreach</span>
+                </li>
+
+            </ul>
+
+            <a href="javascript:void(0)" class="roadmap__btn">
+                <span>Full road map</span>
+                <div>
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M22 2C22 0.89543 21.1046 -7.48422e-07 20 9.4515e-08L2 -3.26954e-07C0.895431 -3.26954e-07 5.74219e-07 0.89543 5.74219e-07 2C5.74219e-07 3.10457 0.895431 4 2 4L18 4L18 20C18 21.1046 18.8954 22 20 22C21.1046 22 22 21.1046 22 20L22 2ZM3.41421 21.4142L21.4142 3.41421L18.5858 0.585786L0.585786 18.5858L3.41421 21.4142Z"
+                            fill="black" />
+                    </svg>
+                </div>
+            </a>
+
+        </div>
+    </section>
 
 
     <!-- BUY -->
+    <section class="buy">
+
+        <div class="buy__site-map">
+            <span>How to buy</span>
+            <div></div>
+            <span>$PSYHOTRUMP</span>
+        </div>
+
+        <div class="buy__container">
+
+            <h2 class="buy__title">How to buy</h2>
+
+            <ul class="buy__steps">
+
+                <li>
+                    <h3>Create wallet</h3>
+                    <p>
+                        Download and install a Solana-compatible wallet such as Phantom, Sollet, or Solflare.
+                        Create a new wallet or import an existing one.
+                        Ensure you securely back up your wallet’s seed phrase.
+                    </p>
+                    <img src="public/img/buy/wallet_icon.png" alt="" width="36" height="36" loading="lazy">
+                </li>
+
+                <li>
+                    <h3>Buy $SOL</h3>
+                    <p>
+                        Purchase Solana (SOL) from a cryptocurrency exchange like Binance, Coinbase, or Kraken.
+                    </p>
+                    <img src="public/img/buy/sol_icon.png" alt="" width="36" height="36" loading="lazy">
+                </li>
+
+                <li>
+                    <h3>Swap</h3>
+                    <p>
+                        Navigate to the trading section of the DEX.
+                        Search for the $PSYHOTRUMP token using its contract address. Enter the amount of $PSYHOTRUMP you
+                        wish to purchase and confirm the transaction.
+                    </p>
+                    <img src="public/img/buy/swap_icon.png" alt="" width="36" height="36" loading="lazy">
+                </li>
+
+            </ul>
+
+            <div class="buy__img">
+                <img src="public/img/buy/buy_img.png" alt="" width="824" height="524" loading="lazy">
+            </div>
+        </div>
+
+    </section>
 
 
     <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__container">
+
+            <div class="footer__navigation">
+                <h2 class="footer__title">$PSYHOTRUMP</h2>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#buy">Buy token</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__socials">
+                <h3>Media Links</h3>
+                <ul>
+                    <li><a href="javascript:void(0)">Twitter</a></li>
+                    <li><a href="javascript:void(0)">Telegram</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__buy">
+                <h3>How to buy</h3>
+                <a href="javascript:void(0)">Dexttols</a>
+            </div>
+
+            <div class="footer__follow">
+                <h3>Follow Us</h3>
+            </div>
+
+            <div class="footer__img">
+                <img src="public/img/footer/footer_img.png" alt="" width="399" height="399" loading="lazy">
+            </div>
+
+        </div>
+    </footer>
 
 
-    <div class="tolltip">Copied</div>
+    <div class="tooltip">Copied</div>
 
     <script src="js/main.js"></script>
 

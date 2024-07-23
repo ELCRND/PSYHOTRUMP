@@ -1,94 +1,143 @@
 .header {
   width: 100%;
   position: absolute;
-  top: 64px;
+  top: 44px;
   left: 0;
-  z-index: 10;
+  overflow: hidden;
 
-  @media screen and (max-width: 1079px) {
+  @media screen and (max-width: 768px) {
+    padding-left: 20px;
+    padding-right: 20px;
     top: 20px;
   }
 }
 
+.header__container {
+  width: min(1560px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 34px;
+  padding-right: 34px;
+  display: flex;
+  align-items: center;
+  gap: 63px;
+
+  @media screen and (max-width: 768px) {
+    height: 41px;
+    border: 1px solid #fff;
+    border-radius: 80px;
+    backdrop-filter: blur(20px);
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.21) 0%,
+      rgba(102, 102, 102, 0.21) 100%
+    );
+    justify-content: center;
+  }
+}
+
 .header__navigation {
-  ul {
-    width: min(1440px, 100%);
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 20px;
-    padding-right: 20px;
-    display: flex;
-    justify-content: space-between;
-    font-weight: 900;
-    font-size: 28px;
-    color: #fff;
-    text-transform: uppercase;
+  width: 100%;
+}
 
-    @media screen and (max-width: 1079px) {
-      width: fit-content;
-      height: 41px;
-      padding-left: 37px;
-      padding-right: 37px;
-      border: 1px solid #fff;
-      border-radius: 80px;
-      justify-content: start;
-      align-items: center;
-      backdrop-filter: blur(20px);
-      background: linear-gradient(
-        90deg,
-        rgba(0, 0, 0, 0.21) 0%,
-        rgba(102, 102, 102, 0.21) 100%
-      );
-      font-size: 14px;
-      text-transform: capitalize;
+.navigation__list {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 32px;
+  color: #fff;
+  text-transform: uppercase;
+  text-wrap: nowrap;
+
+  @media screen and (max-width: 1079px) {
+    text-transform: capitalize;
+  }
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+    font-size: 14px;
+  }
+
+  li {
+    &:nth-of-type(3) {
+      display: none;
     }
-
-    li {
-      &:nth-of-type(4) {
+    &:nth-of-type(4) {
+      @media screen and (max-width: 768px) {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    &:nth-of-type(5) {
+      @media screen and (max-width: 1079px) {
+        text-transform: none;
+      }
+      span {
         display: none;
 
         @media screen and (max-width: 1079px) {
-          display: block;
-          margin-left: 27px;
-          margin-right: 27px;
+          display: inline;
         }
       }
     }
+  }
 
-    a {
-      position: relative;
-      transition: filter 100ms ease;
+  .navigation__link {
+    position: relative;
 
-      &::before {
-        content: "";
-        width: 0;
-        height: 3px;
-        background-color: #fff;
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transition: all 200ms ease;
+    &:before {
+      content: "";
+      width: 0;
+      height: 3px;
+      background-color: #fff;
+      position: absolute;
+      bottom: -2px;
+      left: 50%;
+      transition: all 200ms ease;
 
-        @media screen and (max-width: 1079px) {
-          display: none;
-        }
+      @media screen and (max-width: 768px) {
+        height: 1px;
       }
+    }
 
-      &:hover {
-        &:before {
-          width: 100%;
-          left: 0;
-        }
-      }
-      &:active {
-        filter: brightness(0.8);
+    &:hover {
+      &:before {
+        width: 100%;
+        left: 0;
       }
     }
   }
 }
 
-.socials {
+.navigation__link.socials-link {
   @media screen and (max-width: 1079px) {
     display: none;
+  }
+}
+
+.header__btn {
+  width: 289px;
+  height: 62px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 32px;
+  color: #fff;
+  text-wrap: nowrap;
+  transition: filter 200ms ease, background-color 200ms ease;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+
+  &:hover {
+    filter: brightness(0.8);
+    background: rgba(0, 0, 0, 0.25);
+  }
+  &:active {
+    filter: brightness(1);
+    background: rgba(0, 0, 0, 0);
   }
 }
