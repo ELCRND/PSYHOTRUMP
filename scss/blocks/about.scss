@@ -175,6 +175,11 @@
 
   span {
     margin-left: auto;
+    padding-left: 51px;
+
+    @media screen and (max-width: 768px) {
+      padding-left: 17px;
+    }
   }
 
   div {
@@ -191,6 +196,7 @@
     @media screen and (max-width: 768px) {
       width: 20px;
       height: 20px;
+      margin-right: 6px;
 
       svg {
         width: 11px;
